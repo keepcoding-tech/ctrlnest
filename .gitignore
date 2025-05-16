@@ -1,0 +1,91 @@
+# --- macOS Junk ---
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+*.swp
+*.swo
+
+# --- Node.js ---
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+/dist/               # Bundled assets (if using Vite/Webpack)
+.cache/              # Build caches (e.g., Babel, Sass)
+.env                 # Local environment variables
+.env.local
+.env.*.local
+
+# --- Editor/IDE ---
+.idea/
+.vscode/
+*.sw[op]
+*~
+\#*#
+.\#*
+
+# --- Mojolicious ---
+/.precomp/           # Template precompilation
+*.pid                # PID files (e.g., Hypnotoad)
+
+# --- Testing/CI ---
+/cover_db/           # Coverage reports
+/t/                  # Test temp files (if generated)
+*.t~                 # Test backup files
+
+# --- Logs ---
+*.log
+/logs/
+mojo_log.txt
+
+# --- System ---
+*.bak
+*.tmp
+*.pid
+*.seed
+
+# --- Perl/Carton ---
+/local/              # Carton's local dependency dir
+*.pm.tdy             # Temporary Perl module files
+*.o                  # Compiled object files
+blib/                # Build directory
+Makefile.old
+/MYMETA.*            # CPAN metadata
+
+!Build/
+.last_cover_stats
+/META.yml
+/META.json
+/MYMETA.*
+*.o
+*.pm.tdy
+*.bs
+
+# Devel::Cover
+cover_db/
+
+# Devel::NYTProf
+nytprof.out
+
+# Dist::Zilla
+/.build/
+
+# Module::Build
+_build/
+Build
+Build.bat
+
+# Module::Install
+inc/
+
+# ExtUtils::MakeMaker
+/blib/
+/_eumm/
+/*.gz
+/Makefile
+/Makefile.old
+/MANIFEST.bak
+/pm_to_blib
+/*.zip
