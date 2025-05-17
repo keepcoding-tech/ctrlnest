@@ -53,6 +53,9 @@ mojo_log.txt
 blib/                # Build directory
 Makefile.old
 /MYMETA.*            # CPAN metadata
+/local
+cpanfile.snapshot
+.perltidyrc.tdy
 
 !Build/
 .last_cover_stats

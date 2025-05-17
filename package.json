@@ -1,0 +1,28 @@
+{
+  "name": "ctrl_nest",
+  "version": "1.0.0",
+  "description": "Your Data’s Cozy Nest",
+  "main": "public/bundle/src/index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/keepcoding-tech/ctrlnest.git"
+  },
+  "keywords": [
+    "admin",
+    "dashboard",
+    "control",
+    "panel"
+  ],
+  "author": "keepcoding.tech",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/keepcoding-tech/ctrlnest/issues"
+  },
+  "homepage": "https://github.com/keepcoding-tech/ctrlnest#readme"
+}

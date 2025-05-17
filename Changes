@@ -1,9 +1,2 @@
-1.0.1  2025-05-17
-  - Added Perl::Tidy for code formatting
-  - Added ISSUE TEMPLATE file
-  - Added PULL REQUEST TEMPLATE file
-  - Added Carton Package Manager
-  - Added NPM Package Manager
-
 1.0.0  2025-05-17
   - Code name "Snowflake", this is a major release.
