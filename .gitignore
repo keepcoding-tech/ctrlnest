@@ -1,3 +1,6 @@
+# --- Control Nest ---
+ctrl_nest.yml
+
 # --- macOS Junk ---
 .DS_Store
 ._*

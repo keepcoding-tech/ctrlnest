@@ -1,12 +1,14 @@
 # Database Modules
-#requires 'DBI';
-#requires 'DBD::Pg';
-#requires 'Mojo::Pg';
+requires 'DBI';
+requires 'DBIx::Class';
+requires 'DBIx::Class::Core';
+requires 'DBIx::Class::DeploymentHandler';
+requires 'DBIx::Class::Schema';
+requires 'DBD::Pg';
+requires 'Mojo::Pg';
 
 # Mojolicious Modules
 
 # Other Modules
-#requires 'Email::Sender';
-#requires 'Email::MIME';
 requires 'JSON';
 requires 'Perl::Tidy';

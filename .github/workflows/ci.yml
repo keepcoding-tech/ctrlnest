@@ -19,6 +19,28 @@ jobs:
   build-and-test:
     runs-on: ubuntu-latest
 
+    # # Setup PostgreSQL
+    # services:
+    #   postgres:
+    #     image: postgres:16
+    #     env:
+    #       POSTGRES_USER: postgres
+    #       POSTGRES_PASSWORD: secret
+    #       POSTGRES_DB: ctrl_nest_test
+    #     ports:
+    #       - 5432:5432
+    #     options: >-
+    #       --health-cmd pg_isready
+    #       --health-interval 10s
+    #       --health-timeout 5s
+    #       --health-retries 5
+
+    # # Environment variables for db testing
+    env:
+      DBI_DSN: dbi:Pg:dbname=ctrl_nest_test;host=localhost;port=5432
+      DBI_USER: postgres
+      DBI_PASS: secret
+
     steps:
       # Checks-out the repository under $GITHUB_WORKSPACE
       - name: Checkout Repository
@@ -36,10 +58,9 @@ jobs:
           sudo curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo bash -
           sudo apt install nodejs -y
 
-      # - name: Install dependencies
-      #   run: |
-      #     carton install
-      #     npm install
+      - name: Install dependencies
+        run: |
+          carton install
 
       - name: Run Backend Tests
-        run: prove -l t
+        run: carton exec -- prove -l t
