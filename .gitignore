@@ -1,5 +1,7 @@
 # --- Control Nest ---
+db/_source/
 ctrl_nest.yml
+.prettierrc
 
 # --- macOS Junk ---
 .DS_Store

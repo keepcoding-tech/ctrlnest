@@ -35,11 +35,11 @@ jobs:
     #       --health-timeout 5s
     #       --health-retries 5
 
-    # # Environment variables for db testing
+    # Environment variables for testing
     env:
-      DBI_DSN: dbi:Pg:dbname=ctrl_nest_test;host=localhost;port=5432
-      DBI_USER: postgres
-      DBI_PASS: secret
+      DBI_DSN: dbi:Pg:dbname=mydb
+      DBI_USER: myuser
+      DBI_PASS: mypass
 
     steps:
       # Checks-out the repository under $GITHUB_WORKSPACE

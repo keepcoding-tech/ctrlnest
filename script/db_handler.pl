@@ -23,13 +23,22 @@ my $dh = DBIx::Class::DeploymentHandler->new({
   script_directory    => 'db',
   databases           => 'PostgreSQL',
   sql_translator_args => { add_drop_table => 0 },
-  force_overwrite     => 1,
+  force_overwrite     => 0,
   install_version     => CtrlNest::Schema->VERSION,
 });
 
+# Run the action for deploy
+if ($action eq 'deploy') {
+  $dh->prepare_install;
+  $dh->install;
+
+  print "\n === Database Deployed === \n";
+
+  exit;
+}
+
 # Run the action for install
 if ($action eq 'install') {
-  $dh->prepare_install;
   $dh->install;
 
   print "\n === Database installed === \n";
@@ -48,6 +57,6 @@ if ($action eq 'upgrade') {
 }
 
 # Invalid action
-die "\n Unknown action: $action (use install or upgrade)\n";
+die "\n Unknown action: $action (use deploy, install or upgrade)\n";
 
 1;
