@@ -34,32 +34,17 @@
 
     <!-- --- End CSS (Cascading Style Sheets) --- -->
   </head>
-  <body class="hold-transition sidebar-mini">
-    <div class="wrapper">
 
-      <!-- Header - Navigation Bar -->
-      %= include 'components/navbar'
+  <!-- Some other pages will use this exact layout, but with a different body class -->
+  <% my $body_class = stash('auth_layout') // 'login-page bg-body-secondary'; %>
 
-      <!-- Aside - Left Side Bar -->
-      %= include 'components/sidebar'
-
-      <!-- Content Wrapper. Contains page content -->
-      <main class="content-wrapper">
-        <%= content %>
-      </main>
-
-      <!-- Aside - Right Control Side Bar -->
-      %= include 'components/ctrl_sidebar'
-
-      <!-- Footer - Footer -->
-      %= include 'components/footer'
-    </div>
+  <body class="<%= $body_class %>">
+    <%= content %>
 
     <!-- --- Start JS (JavaScript) --- -->
 
     %= javascript '/js/jquery.min.js'
-    %= javascript '/js/adminlte.min.js'
-    %= javascript '/js/theme.js'
+    %= javascript '/js/bundle/bootstrap.bundle.min.js'
 
     <!-- --- End JS (JavaScript) --- -->
   </body>
